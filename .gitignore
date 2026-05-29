@@ -1,0 +1,16 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Dependencies (none needed at runtime; just in case tooling is added)
+node_modules/
+
+# Environment / secrets
+.env
+.env.*

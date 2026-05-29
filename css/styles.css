@@ -64,7 +64,7 @@ img{max-width:100%;display:block}
 .section-title{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 auto 16px;text-align:center}.section-title h2{font-size:30px;line-height:1;margin:0;color:var(--brown)}.section-title span{width:72px;height:2px;background:linear-gradient(90deg,transparent,var(--pink))}.section-title span:last-child{background:linear-gradient(90deg,var(--pink),transparent)}.section-title i{color:var(--pink);font-style:normal;font-size:11px;line-height:1}
 .signature{padding:20px 0 38px}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;max-width:1120px;margin:0 auto}.product-card{background:#fffaf7;border:1px solid var(--border);border-radius:14px;overflow:hidden;text-align:center;box-shadow:0 4px 14px rgba(62,31,0,.035)}.product-card img{width:100%;height:138px;object-fit:cover;object-position:center;display:block}.cakes-card img{object-position:center 55%}.cupcakes-card img,.scones-card img{object-position:center center}.product-card h3{font-size:21px;margin:8px 0 3px;color:var(--brown);font-weight:700}.product-card p{font-size:14px;margin:0 12px 14px;color:#3f2112}
 
-.page-hero{height:250px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid rgba(62,31,0,.05);background:#fff6ec}.page-hero-bg{position:absolute;inset:0;background-repeat:no-repeat;background-position:right center;background-size:auto 100%;opacity:.62}.gallery-bg{background-image:url('../assets/banners/banner-2.png');opacity:.50}.about-bg{background-image:url('../assets/banners/banner-1.png');background-size:cover;background-position:center;opacity:.58}.contact-bg{background-image:url('../assets/banners/banner-5.png');opacity:.46}.page-title-wrap{position:relative;z-index:1;text-align:center;color:var(--text);margin-top:12px}.page-title-wrap h1{font-family:var(--script);font-weight:400;color:var(--pink);font-size:64px;line-height:.92;margin:0 0 7px}.page-title-wrap p{font-size:18px;margin:0}.page-title-row{display:flex;align-items:center;justify-content:center;gap:22px}.page-title-row span{width:56px;height:1px;background:var(--brown);opacity:.55}.page-title-row h1{font-family:var(--script);font-size:60px}.small-title-hero{height:190px}.small-title-hero .page-title-wrap{margin-top:28px}.small-title-hero p{font-size:17px}.about-title{text-align:left;width:min(1120px,88vw)}.about-title h1{font-size:58px}.about-title p{font-size:19px}.contact-title h1{font-size:66px}
+.page-hero{height:250px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid rgba(62,31,0,.05);background:#fff6ec}.page-hero-bg{position:absolute;inset:0;background-repeat:no-repeat;background-position:right center;background-size:auto 100%;opacity:.62}.gallery-bg{background-image:url('../assets/banners/banner-2.webp');opacity:.50}.about-bg{background-image:url('../assets/banners/banner-1.webp');background-size:cover;background-position:center;opacity:.58}.contact-bg{background-image:url('../assets/banners/banner-5.webp');opacity:.46}.page-title-wrap{position:relative;z-index:1;text-align:center;color:var(--text);margin-top:12px}.page-title-wrap h1{font-family:var(--script);font-weight:400;color:var(--pink);font-size:64px;line-height:.92;margin:0 0 7px}.page-title-wrap p{font-size:18px;margin:0}.page-title-row{display:flex;align-items:center;justify-content:center;gap:22px}.page-title-row span{width:56px;height:1px;background:var(--brown);opacity:.55}.page-title-row h1{font-family:var(--script);font-size:60px}.small-title-hero{height:190px}.small-title-hero .page-title-wrap{margin-top:28px}.small-title-hero p{font-size:17px}.about-title{text-align:left;width:min(1120px,88vw)}.about-title h1{font-size:58px}.about-title p{font-size:19px}.contact-title h1{font-size:66px}
 
 .gallery-section{padding:28px 0 30px}.masonry-gallery{columns:5 215px;column-gap:12px}.masonry-gallery img{width:100%;break-inside:avoid;margin:0 0 12px;border-radius:14px;box-shadow:0 4px 12px rgba(62,31,0,.05);background:#fff}.masonry-gallery img:hover{transform:translateY(-2px);transition:.2s ease;box-shadow:var(--shadow)}
 
@@ -304,7 +304,7 @@ html{font-size:13px!important;}
 .home-hero{
   height:332px!important;
   overflow:hidden!important;
-  background:#fff8ef url('../assets/banners/satin-bg.png') center center/cover no-repeat!important;
+  background:#fff8ef url('../assets/banners/satin-bg.webp') center center/cover no-repeat!important;
   border-bottom:1px solid rgba(62,31,0,.055)!important;
 }
 .hero-carousel,.hero-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;}
@@ -388,7 +388,7 @@ html{font-size:13px!important;}
 @media (max-width:760px){
   html{font-size:14px!important;}
   .main-nav{height:auto!important;}
-  .home-hero{height:510px!important;background:#fff8ef url('../assets/banners/satin-bg.png') center center/cover no-repeat!important;}
+  .home-hero{height:510px!important;background:#fff8ef url('../assets/banners/satin-bg.webp') center center/cover no-repeat!important;}
   .hero-slide img{
     right:50%!important;
     transform:translateX(50%)!important;
@@ -713,7 +713,7 @@ body{font-family:var(--serif)!important;}
 }
 
 .gallery-hero .page-hero-bg.gallery-bg{
-  background-image:url('../assets/banners/satin-bg.png') !important;
+  background-image:url('../assets/banners/satin-bg.webp') !important;
   background-size:cover !important;
   background-position:center center !important;
   opacity:.9 !important;
@@ -727,7 +727,7 @@ body{font-family:var(--serif)!important;}
   transform:translateX(-50%);
   width:min(560px, 44vw);
   height:168px;
-  background-image:url('../assets/banners/banner-2.png');
+  background-image:url('../assets/banners/banner-2.webp');
   background-repeat:no-repeat;
   background-size:cover;
   background-position:right center;
@@ -777,7 +777,7 @@ body{font-family:var(--serif)!important;}
    - keeps mobile centered and clean
    ========================================================= */
 .gallery-hero .page-hero-bg.gallery-bg{
-  background-image:url('../assets/banners/satin-bg.png') !important;
+  background-image:url('../assets/banners/satin-bg.webp') !important;
   background-size:cover !important;
   background-position:center center !important;
   opacity:1 !important;
@@ -789,7 +789,7 @@ body{font-family:var(--serif)!important;}
   transform:translateX(-50%) !important;
   width:min(380px, 31vw) !important;
   height:176px !important;
-  background-image:url('../assets/banners/gallery-cake-cutout-cropped.png') !important;
+  background-image:url('../assets/banners/gallery-cake-cutout-cropped.webp') !important;
   background-repeat:no-repeat !important;
   background-size:contain !important;
   background-position:center bottom !important;
@@ -822,7 +822,7 @@ body{font-family:var(--serif)!important;}
    with the silk waves spanning from left to right.
    ========================================================= */
 .gallery-hero .page-hero-bg.gallery-bg{
-  background-image:url('../assets/banners/gallery-hero-span.png') !important;
+  background-image:url('../assets/banners/gallery-hero-span.webp') !important;
   background-size:cover !important;
   background-position:center center !important;
   background-repeat:no-repeat !important;
@@ -858,7 +858,7 @@ body{font-family:var(--serif)!important;}
    - keeps the cake artwork integrated with the full banner
    ========================================================= */
 .about-hero .page-hero-bg.about-bg{
-  background-image:url('../assets/banners/banner-1.png') !important;
+  background-image:url('../assets/banners/banner-1.webp') !important;
   background-size:cover !important;
   background-position:center center !important;
   opacity:.62 !important;
@@ -876,7 +876,7 @@ body{font-family:var(--serif)!important;}
   height:270px;
 }
 .contact-hero .page-hero-bg.contact-bg{
-  background-image:url('../assets/banners/contact-hero-span.png') !important;
+  background-image:url('../assets/banners/contact-hero-span.webp') !important;
   background-size:cover !important;
   background-position:center center !important;
   opacity:1 !important;
@@ -915,7 +915,7 @@ body{font-family:var(--serif)!important;}
   isolation: isolate;
 }
 .contact-hero .page-hero-bg.contact-bg{
-  background-image: url('../assets/banners/satin-bg.png') !important;
+  background-image: url('../assets/banners/satin-bg.webp') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -1497,4 +1497,93 @@ body{font-family:var(--serif)!important;}
   body.view-home .home-hero .divider{
     text-shadow:0 1px 0 rgba(255,255,255,.82), 0 4px 14px rgba(255,255,255,.55) !important;
   }
+}
+
+
+
+/* =============================================================
+   ACCESSIBILITY & UX ENHANCEMENTS
+   Appended last so these rules win without editing the stacked
+   override sections above. Covers: visible keyboard focus,
+   reduced-motion support, usable carousel controls, bigger
+   mobile tap targets, and a skip-to-content link.
+   ============================================================= */
+
+/* Skip link: lets keyboard / screen-reader users jump past the nav */
+.skip-link{
+  position:absolute;left:8px;top:-56px;z-index:1000;
+  background:var(--pink);color:#fff;padding:10px 16px;border-radius:8px;
+  font-weight:700;font-family:var(--serif);text-decoration:none;
+  transition:top .2s ease;
+}
+.skip-link:focus{top:8px;outline:3px solid #fff;outline-offset:2px;}
+
+/* Visible keyboard focus for every interactive element.
+   Overrides the earlier outline:0 / outline:none!important rules. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.nav-link:focus-visible,
+.mobile-nav-link:focus-visible,
+.mobile-menu-toggle:focus-visible,
+.brand-logo:focus-visible,
+.btn:focus-visible,
+.carousel-dots button:focus-visible,
+.masonry-gallery img:focus-visible{
+  outline:3px solid var(--pink-bright)!important;
+  outline-offset:3px!important;
+  box-shadow:0 0 0 5px rgba(255,20,147,.18)!important;
+  border-radius:6px;
+}
+.btn:focus-visible{outline-offset:4px!important;}
+/* Keep mouse clicks clean: only show the ring for keyboard focus */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible){outline:none;}
+/* Make the focused main region not show a distracting outline */
+#main-content:focus{outline:none;}
+
+/* Carousel dots: make them visible and usable (were display:none) */
+.carousel-dots{
+  display:flex!important;
+  gap:10px;
+  position:absolute;
+  left:50%;
+  bottom:14px;
+  transform:translateX(-50%);
+  z-index:6;
+  padding:7px 12px;
+  border-radius:999px;
+  background:rgba(255,248,239,.6);
+  box-shadow:0 4px 12px rgba(62,31,0,.12);
+}
+.carousel-dots button{
+  width:11px;height:11px;min-width:11px;border-radius:50%;
+  border:2px solid var(--pink);
+  background:transparent;cursor:pointer;padding:0;margin:0;
+  transition:background .2s ease, transform .2s ease;
+}
+.carousel-dots button:hover{background:var(--pink-soft);}
+.carousel-dots button.active{background:var(--pink);transform:scale(1.15);}
+
+@media (max-width:760px){
+  .carousel-dots{bottom:10px;}
+  /* Comfortable tap targets on phones (WCAG 2.5.5) */
+  .nav-side .nav-link{padding:12px 14px!important;}
+  .mobile-nav-link{padding:14px 16px!important;}
+  .top-bar{min-height:42px!important;height:auto!important;padding:6px 12px;line-height:1.3;}
+}
+
+/* Respect users who ask the OS to reduce motion */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto!important;}
+  *,*::before,*::after{
+    animation-duration:.001ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.001ms!important;
+  }
+  .hero-slide{transition:none!important;}
+  .btn:hover,
+  .product-card:hover,
+  .masonry-gallery img:hover{transform:none!important;}
 }
