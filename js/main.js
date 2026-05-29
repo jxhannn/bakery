@@ -15,7 +15,10 @@
       }
     });
     document.body.className = 'view-' + page;
-    document.title = (page === 'home' ? '' : page.charAt(0).toUpperCase() + page.slice(1) + ' | ') + 'Kabelo’s Tasty Bakery';
+    const base = 'Kabelo’s Tasty Bakery';
+    document.title = page === 'home'
+      ? base + ' | Custom Cakes & Treats in Centurion'
+      : page.charAt(0).toUpperCase() + page.slice(1) + ' | ' + base;
     if (window.location.hash !== '#' + page && (shouldScroll || window.location.hash)) {
       history.replaceState(null, '', '#' + page);
     }
@@ -80,32 +83,62 @@
   });
 
   const carousel = document.querySelector('[data-carousel]');
+  const heroRegion = carousel ? carousel.closest('.hero') : null;
   const slides = carousel ? Array.from(carousel.querySelectorAll('.hero-slide')) : [];
   const dots = Array.from(document.querySelectorAll('.carousel-dots button'));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let index = 0;
-  let timer;
+  let timer = null;
+  let paused = false;
 
   function showSlide(next){
     if(!slides.length) return;
     index = (next + slides.length) % slides.length;
     slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    dots.forEach((dot, i) => {
+      const on = i === index;
+      dot.classList.toggle('active', on);
+      dot.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  function stop(){
+    window.clearInterval(timer);
+    timer = null;
   }
 
   function start(){
-    if(slides.length < 2) return;
-    window.clearInterval(timer);
+    if(slides.length < 2 || paused || reduceMotion.matches) return;
+    stop();
     timer = window.setInterval(() => showSlide(index + 1), 5000);
   }
 
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
-      window.clearInterval(timer);
       showSlide(i);
       start();
     });
   });
 
+  if (carousel && slides.length > 1) {
+    const region = heroRegion || carousel;
+    // Pause auto-advance while the user hovers or keyboard-focuses the hero,
+    // so moving content never fights with reading or navigating (WCAG 2.2.2).
+    ['mouseenter', 'focusin'].forEach(ev =>
+      region.addEventListener(ev, () => { paused = true; stop(); }));
+    ['mouseleave', 'focusout'].forEach(ev =>
+      region.addEventListener(ev, () => { paused = false; start(); }));
+    // Pause when the tab is hidden; resume when it returns.
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stop(); else start();
+    });
+    // React live if the user toggles the reduced-motion OS setting.
+    reduceMotion.addEventListener('change', () => {
+      if (reduceMotion.matches) stop(); else start();
+    });
+  }
+
+  showSlide(0);
   start();
 
   const form = document.querySelector('.contact-form');
@@ -172,7 +205,11 @@
     }
 
     buildMasonryColumns(true);
-    window.addEventListener('resize', () => buildMasonryColumns(false));
+    let resizeRaf;
+    window.addEventListener('resize', () => {
+      window.clearTimeout(resizeRaf);
+      resizeRaf = window.setTimeout(() => buildMasonryColumns(false), 150);
+    });
     pageLinks.forEach(link => {
       if (link.dataset.pageLink === 'gallery') {
         link.addEventListener('click', () => setTimeout(() => buildMasonryColumns(true), 80));
